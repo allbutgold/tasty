@@ -15,7 +15,6 @@ const SearchCategory = () => {
             .then(res => res.json())
             .then(data => {
                 setCatResult(data.meals)
-                // console.log(catResult)
             })
     }, [catResult, cat])
 

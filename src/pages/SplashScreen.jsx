@@ -6,7 +6,9 @@ import LogoTypo from '../img/logoTypo.png'
 /* 
 TODOS:
     TODO: import and add vector graphics from src/img
+    TODO: remove inline styles and add them from the module 
  */
+
 const SplashScreen = () => {
     return (
         <Link to='/onboarding'>

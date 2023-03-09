@@ -3,7 +3,7 @@ import styles from '../areaCards/areaCards.module.scss';
 
 
 const AreaCards = ({area}) => {
-    const mealId = area.idMeal;
+    // const mealId = area.idMeal;
     console.log(mealId)
 
     return (

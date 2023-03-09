@@ -24,7 +24,7 @@ function App() {
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/home" element={<Home />} />
           <Route path="/searcharea/:area" element={<SearchArea />} />
-          <Route path="/searchcategory" element={<SearchCategory />} />
+          <Route path="/searchcategory/:cat" element={<SearchCategory />} />
           <Route path="/serachresult" element={<SearchResult />} />
           <Route path="/detailspage" element={<DetailsPage />} />
           <Route path="/*" element={<ErrorPage />} />

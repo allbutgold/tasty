@@ -12,27 +12,27 @@ const AreaSlider = () => {
             .then((data) => setArea(data.meals))
     }, [])
 
-//<Link to={`/searcharea/${item.strArea}`}>{item.strArea}</Link>
+    //<Link to={`/searcharea/${item.strArea}`}>{item.strArea}</Link>
     return (
         <section>
             <div>
                 <h2>Areas</h2>
-                <button onClick={()=> setToggle(!toggle)}>See All</button>
+                <button onClick={() => setToggle(!toggle)}>See All</button>
             </div>
             {area.map((item, i) => {
-              
+
                 return (
-                    toggle ? <Link to={`/searcharea/${item.strArea}`}>{item.strArea}</Link> :null
+                    toggle ? <Link to={`/searcharea/${item.strArea}`}>{item.strArea}</Link> : null
                 )
-                    }
-    
-                )}
-                
-                {toggle? null : <div>
-                    <button>American</button>
-                    <button>British</button>
-                    <button>Canadian</button>
-                    </div>}
+            }
+
+            )}
+
+            {toggle ? null : <div>
+                <button>American</button>
+                <button>British</button>
+                <button>Canadian</button>
+            </div>}
         </section>
 
     );

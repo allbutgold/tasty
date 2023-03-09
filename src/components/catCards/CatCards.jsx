@@ -3,8 +3,7 @@ import styles from '../catCards/catCards.module.scss';
 
 
 const CarCards = ({cat}) => {
-    // const mealId = cat.idMeal;
-    
+
 
     return (
         <section className={styles.catCards}>

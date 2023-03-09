@@ -15,7 +15,7 @@ const AreaSlider = () => {
         <section>
             <div>
                 <h2>Areas</h2>
-                <Link>See All</Link>
+                <Link to='/SearchArea'>See All</Link>
             </div>
             {area.map((item, i) => {
                 return (

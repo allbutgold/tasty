@@ -29,9 +29,9 @@ const AreaSlider = () => {
             )}
 
             {toggle ? null : <div>
-                <button>American</button>
-                <button>British</button>
-                <button>Canadian</button>
+                <Link to={'/searcharea/American'}>American</Link>
+                <Link to={'/searcharea/British'}>British</Link>
+                <Link to={'/searcharea/Canadian'}>Canadian</Link>
             </div>}
         </section>
 

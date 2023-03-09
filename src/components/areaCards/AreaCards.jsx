@@ -1,5 +1,7 @@
 
 const AreaCards = ({area}) => {
+    const mealId = area.idMeal;
+    console.log(mealId)
 
     return (
         <section>

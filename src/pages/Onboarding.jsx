@@ -1,5 +1,11 @@
 import { Link } from 'react-router-dom'
 
+/* 
+TODOS:
+    TODO: add stylings
+    TODO: import vector graphics from figma
+*/
+
 const Onboarding = () => {
     return (
         <section className="onboarding">

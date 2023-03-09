@@ -18,6 +18,7 @@ const MealOfTheDay = () => {
 
     return (
         <section className='mealOfTheDay'>
+            <h1>Meal of the day component</h1>
         <h1>{randomMeal.strMeal}</h1>
         <p>{randomMeal.strCategory}</p>
         <p>{randomMeal.strArea}</p>

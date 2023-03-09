@@ -1,6 +1,10 @@
+import { useParams } from 'react-router-dom'
+
 const SearchCategory = () => {
-    return ( 
-        <h1>This is the SearchCategory page</h1>
+
+    const { cat } = useParams()
+    return (
+        <h1>{cat}</h1>
     );
 }
 

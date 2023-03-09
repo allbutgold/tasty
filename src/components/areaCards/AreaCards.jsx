@@ -1,6 +1,12 @@
-const AreaCards = () => {
+
+const AreaCards = ({area}) => {
+
     return (
-        <h1>Area Cards</h1>
+        <section>
+            <img src={area.strMealThumb} alt={area.strMeal} />
+            <h1>{area.strMeal}</h1>
+        </section>
+        
     );
 }
 

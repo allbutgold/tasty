@@ -1,8 +1,21 @@
-import 'Navigation.scss'
+//import library
+import { Link } from 'react-router-dom'
+
 
 const Navigation = () => {
     return (
-        <h1>Navigation</h1>
+        <section className='navigation'>
+            <nav>
+                <Link to='/'>SplashScreen</Link>
+                <Link to='/onboarding'>Onboarding</Link>
+                <Link to='/home'>Home</Link>
+                <Link to='/searcharea'>searcharea</Link>
+                <Link to='/searchcategory'>searchcategory</Link>
+                <Link to='/serachresult'>serachresult</Link>
+                <Link to='/detailspage'>detailspage</Link>
+            </nav>
+        </section>
+        
     );
 }
 

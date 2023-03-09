@@ -1,5 +1,5 @@
 // library import 
-import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 // pages import 
 import SplashScreen from './pages/SplashScreen.jsx';
@@ -9,20 +9,24 @@ import SearchArea from './pages/SearchArea.jsx';
 import SearchCategory from './pages/SearchCategory.jsx';
 import SearchResult from './pages/SearchResult.jsx';
 import DetailsPage from './pages/DetailsPage.jsx';
-import ErrorPage from './pages/Errorpage';
+import ErrorPage from './pages/ErrorPage';
+
+// components import 
+import Navigation from './components/navigation/Navigation.jsx';
 
 
 function App() {
   return (
       <Router>
+        <Navigation />
         <Routes>
           <Route path="/" element={<SplashScreen />} />
-          <Route path="/Onboarding" element={<Onboarding />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/SearchArea" element={<SearchArea />} />
-          <Route path="/SearchCategory" element={<SearchCategory />} />
-          <Route path="/SearchResult" element={<SearchResult />} />
-          <Route path="/DetailsPage" element={<DetailsPage />} />
+          <Route path="/onboarding" element={<Onboarding />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/searcharea" element={<SearchArea />} />
+          <Route path="/searchcategory" element={<SearchCategory />} />
+          <Route path="/serachresult" element={<SearchResult />} />
+          <Route path="/detailspage" element={<DetailsPage />} />
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </Router>

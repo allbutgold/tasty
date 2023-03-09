@@ -1,6 +1,18 @@
+
+import AreaSlider from '../components/areaSlider/AreaSlider'
+
+//import AreaSlider from '../components/areaSlider/AreaSlider'
+
+
 const Home = () => {
+
     return ( 
-        <h1>This is the Home page</h1>
+
+           <section className="home">
+              <h1>This is the Home page</h1>
+       
+              <AreaSlider />
+            </section>
     );
 }
 

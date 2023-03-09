@@ -1,6 +1,11 @@
 const CatSlider = () => {
     return (
-        <h1>Category Slider</h1>
+        <div className="catSlider">
+            <div>
+                
+            </div>
+
+        </div>
     );
 }
 

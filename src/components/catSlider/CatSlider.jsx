@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 
+/* 
+TODOS:
+    TODO: remove link 'see all' and add button instead
+*/
+
 const CatSlider = () => {
 
     const [cat, setCat] = useState([])

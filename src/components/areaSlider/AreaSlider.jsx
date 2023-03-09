@@ -8,11 +8,11 @@ const AreaSlider = () => {
     const [toggle, setToggle] = useState(false);
     useEffect(() => {
         fetch('https://www.themealdb.com/api/json/v1/1/list.php?a=list')
-        .then((response) => response.json())
-        .then((data) => setArea(data.meals))
+            .then((response) => response.json())
+            .then((data) => setArea(data.meals))
     }, [])
-console.log(toggle)
 
+//<Link to={`/searcharea/${item.strArea}`}>{item.strArea}</Link>
     return (
         <section>
             <div>
@@ -22,7 +22,7 @@ console.log(toggle)
             {area.map((item, i) => {
               
                 return (
-                    toggle ? <button>{item.strArea}</button> :null
+                    toggle ? <Link to={`/searcharea/${item.strArea}`}>{item.strArea}</Link> :null
                 )
                     }
     
@@ -34,7 +34,7 @@ console.log(toggle)
                     <button>Canadian</button>
                     </div>}
         </section>
-        
+
     );
 
 }

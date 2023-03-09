@@ -13,9 +13,7 @@ const SplashScreen = () => {
     return (
         <Link to='/onboarding'>
             <section
-                style={{
-                    backgroundColor: '#70B9BE'
-                }}
+                style={{ backgroundColor: '#70B9BE' }}
                 className="splashScreen" >
                 <div style={{
                     display: 'flex',

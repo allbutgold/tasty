@@ -11,9 +11,9 @@ const Home = () => {
 
 
         <section className="home">
-          <h1>This is the Home page</h1>
-          <AreaSlider />
-          <MealOfTheDay />
+            <h1>This is the Home page</h1>
+            <AreaSlider />
+            <MealOfTheDay />
         </section>
         
     );

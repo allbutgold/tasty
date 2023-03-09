@@ -1,6 +1,13 @@
+// import components
+import MealOfTheDay from "../components/mealOfTheDay/MealOfTheDay.jsx";
+
 const Home = () => {
     return ( 
-        <h1>This is the Home page</h1>
+        <section className="home">
+            <h1>This is the Home page</h1>
+        <MealOfTheDay />
+        </section>
+        
     );
 }
 

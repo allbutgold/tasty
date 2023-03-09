@@ -3,7 +3,7 @@ import styles from '../catCards/catCards.module.scss';
 
 
 const CarCards = ({cat}) => {
-    const mealId = cat.idMeal;
+    // const mealId = cat.idMeal;
     
 
     return (

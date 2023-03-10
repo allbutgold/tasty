@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 // import compoenents
 import AreaCards from '../components/areaCards/AreaCards.jsx';
 import AreaSlider from '../components/areaSlider/AreaSlider.jsx';
+import BackButton from '../components/backButton/BackButton.jsx'
 
 
 const SearchArea = () => {
@@ -16,13 +17,13 @@ const SearchArea = () => {
             .then(res => res.json())
             .then(data => {
                 setAreaResult(data.meals)
-                console.log(areaResult)
             })
-    }, [areaResult, area])
+    }, [area])
 
 
     return (
         <section>
+            <BackButton />
             <AreaSlider />
             {areaResult &&
                 areaResult.map(area => {

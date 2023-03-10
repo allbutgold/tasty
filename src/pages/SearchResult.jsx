@@ -1,6 +1,10 @@
+import SearchByName from '../components/searchByName/SearchByName'
+
 const SearchResult = () => {
     return ( 
-        <h1>This is the SearchResult page</h1>
+        <section>
+            <SearchByName />
+        </section>
     );
 }
 

@@ -6,18 +6,14 @@ import iconSearch from '../../img/icons/iconSearch.svg'
 import iconHeart from '../../img/icons/iconHeart.svg'
 import iconUser from '../../img/icons/iconUser.svg'
 
-
 const Navigation = () => {
-
-
-
     return (
         <section className='navigation'>
             <nav>
                 <Link to='/home'>
                     <img src={iconHome} alt="" />
                 </Link>
-                <Link to='/searchResult'>
+                <Link to='/searchresult'>
                     <img src={iconSearch} alt="" />
                 </Link>
                 <Link

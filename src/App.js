@@ -1,6 +1,8 @@
 // library import 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
+import { useState } from 'react';
+
 // pages import 
 import SplashScreen from './pages/SplashScreen.jsx';
 import Onboarding from './pages/Onboarding.jsx';
@@ -16,6 +18,9 @@ import Navigation from './components/navigation/Navigation.jsx';
 
 
 function App() {
+
+  const [ selected, setSelected ] = useState(false)
+
   return (
       <Router>
         <Navigation />

@@ -4,10 +4,14 @@ import styles from '../details/details.module.scss';
 // import libraries
 import { Link } from 'react-router-dom';
 
+// import components
+import BackButton from '../backButton/BackButton.jsx'
+
 
 const Details = ({meal}) => {
     return (
         <section className={styles.details}>
+            <BackButton />
             <h1>Details</h1>
             <img src={meal.strMealThumb} alt={meal.strMeal} />
             <h1>{meal.strMeal}</h1>

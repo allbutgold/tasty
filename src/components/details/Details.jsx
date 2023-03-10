@@ -3,12 +3,15 @@ import styles from '../details/details.module.scss';
 
 // import libraries
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 // import components
 import BackButton from '../backButton/BackButton.jsx'
 
 
 const Details = ({meal}) => {
+    const [showIngredients, setShowIngredients] = useState(true);
+
     return (
         <section className={styles.details}>
             <BackButton />
@@ -17,6 +20,11 @@ const Details = ({meal}) => {
             <h1>{meal.strMeal}</h1>
             <p>{meal.strCategory}</p>
             <p>{meal.strArea}</p>
+            <div>
+                <button onClick={() => setShowIngredients(true)}>Ingredients</button>
+                <button onClick={() => setShowIngredients(false)}>Instructions</button>
+            </div>
+            {showIngredients ? (
             <article>
                 <h2>Ingredients</h2>
                 <h4>{`${meal.strIngredient1} ${meal.strMeasure1}`}</h4>
@@ -40,10 +48,12 @@ const Details = ({meal}) => {
                 <h4>{`${meal.strIngredient19} ${meal.strMeasure19}`}</h4>
                 <h4>{`${meal.strIngredient20} ${meal.strMeasure20}`}</h4>
             </article>
+            ) : (
             <article>
                 <h2>Instructions</h2>
                 <p>{meal.strInstructions}</p>
             </article>
+            )}
             <Link target="_blank" to={meal.strYoutube}>Video</Link>
         </section>
 

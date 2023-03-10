@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 
 // import components
 import CatCards from '../components/catCards/CatCards.jsx'
+import BackButton from '../components/backButton/BackButton.jsx'
 
 const SearchCategory = () => {
     const { cat } = useParams()
@@ -20,6 +21,7 @@ const SearchCategory = () => {
 
     return (
         <section>
+            <BackButton />
             {
                 catResult &&
                 catResult.map(cat => {

@@ -1,3 +1,6 @@
+// import scss
+import styles from '../src/App.scss'
+
 // library import 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -23,7 +26,9 @@ function App() {
   console.log(path, 'path');
 
   return (
-      <Router>
+    <main className={styles.app}>
+        <Router>
+
         <Routes>
           <Route path="/" element={<SplashScreen />} />
           <Route path="/onboarding" element={<Onboarding />} />
@@ -35,6 +40,7 @@ function App() {
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </Router>
+      </main>
   );
 }
 

@@ -1,3 +1,6 @@
+// import scss
+import '../src/App.scss'
+
 // library import 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -17,7 +20,8 @@ import Navigation from './components/navigation/Navigation.jsx';
 
 function App() {
   return (
-      <Router>
+    <main className={'app'}>
+        <Router>
         <Navigation />
         <Routes>
           <Route path="/" element={<SplashScreen />} />
@@ -30,6 +34,8 @@ function App() {
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </Router>
+    </main>
+
   );
 }
 

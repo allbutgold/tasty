@@ -1,5 +1,5 @@
 // import scss
-import '../src/App.scss'
+import styles from '../src/App.scss'
 
 // library import 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -25,7 +25,7 @@ function App() {
   const [ selected, setSelected ] = useState(false)
 
   return (
-    <main className={'app'}>
+    <main className={styles.app}>
         <Router>
 
         <Routes>

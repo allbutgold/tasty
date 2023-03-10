@@ -22,7 +22,7 @@ function App() {
   return (
     <main className={'app'}>
         <Router>
-        <Navigation />
+
         <Routes>
           <Route path="/" element={<SplashScreen />} />
           <Route path="/onboarding" element={<Onboarding />} />

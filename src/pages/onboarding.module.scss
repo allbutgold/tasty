@@ -1,0 +1,56 @@
+@font-face {
+    font-family: montserrat;
+    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+    font-weight: 1 999;
+    font-stretch: 50% 200%;
+}
+
+.onboarding {
+        
+        height: 100vh;
+        background-size: 100%;
+        background-image: url(../img/onboardingBackground.png);
+        
+        background-position: 0px 100px ;
+        background-color: #70B9BE;
+        background-repeat: no-repeat;
+        div {
+            height: 100vh;
+            background-size: contain;
+            background-image: url(../img/Pattern.svg);
+        }
+        article {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: white;
+            bottom: 0;
+            position: absolute;
+            border-radius: 20px;
+            padding: 20px;
+            h1 {
+                font-family: montserrat;
+                font-weight: 700;
+                font-size: 1.3rem;
+                margin-bottom: 0px;
+            }
+            p {
+                font-family: montserrat;
+                font-weight: 400;
+                text-align: center;
+                color: #97A2B0;
+            }
+            button {
+                width: 300px;
+                height: 50px;
+                background-color: black;
+                border: none;
+                border-radius: 20px;
+                color: white;
+                font-family: montserrat;
+                font-weight: 700;
+                
+            }
+        }
+    
+}

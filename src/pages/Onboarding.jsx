@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 
+import styles from './onboarding.module.scss'
+
 /* 
 TODOS:
     TODO: add stylings
@@ -8,12 +10,17 @@ TODOS:
 
 const Onboarding = () => {
     return (
-        <section className="onboarding">
-            <article>
-                <h1>All recipes u need</h1>
+        <section className={styles.onboarding}>
+            <div>
+                <article>
+                <h1>All the recipes you needed</h1>
                 <p>5000+ healthy recipes made by people for your healthy life</p>
-                <Link to='/home'>Get Started</Link>
+                <Link to='/home'>
+                    <button>Get Started</button>
+                </Link>
             </article>
+            </div>
+            
         </section>
     );
 }

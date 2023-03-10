@@ -10,7 +10,6 @@ const SearchCategory = () => {
     const { cat } = useParams()
     const [catResult, setCatResult] = useState([])
 
-
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${cat}`)
             .then(res => res.json())

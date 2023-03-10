@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<SplashScreen />} />
           <Route path="/onboarding" element={<Onboarding />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={<Home selected={selected} setSelected={setSelected} />} />
           <Route path="/searcharea/:area" element={<SearchArea />} />
           <Route path="/searchcategory/:cat" element={<SearchCategory />} />
           <Route path="/searchresult/:search" element={<SearchResult />} />

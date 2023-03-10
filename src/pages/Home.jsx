@@ -6,15 +6,12 @@ import AreaSlider from '../components/areaSlider/AreaSlider'
 import CatSlider from '../components/catSlider/CatSlider'
 import SearchByName from "../components/searchByName/SearchByName.jsx";
 
-
 const Home = () => {
 
   return (
-
-
     <section className="home">
       <article>
-        <SearchByName/>
+        <SearchByName />
       </article>
       <MealOfTheDay />
       <AreaSlider />

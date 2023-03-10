@@ -18,7 +18,7 @@ const SearchArea = () => {
                 setAreaResult(data.meals)
                 console.log(areaResult)
             })
-    }, [areaResult, area])
+    }, [])
 
 
     return (

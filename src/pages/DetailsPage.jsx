@@ -13,7 +13,7 @@ const DetailsPage = () => {
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
             .then(res => res.json())
             .then(data => setMeal(data.meals)
-            )}, [meal, id]);
+            )}, []);
 
     return ( 
         <section>

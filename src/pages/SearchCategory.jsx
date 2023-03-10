@@ -16,7 +16,7 @@ const SearchCategory = () => {
             .then(data => {
                 setCatResult(data.meals)
             })
-    }, [catResult, cat])
+    }, [])
 
     return (
         <section>

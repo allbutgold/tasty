@@ -20,7 +20,6 @@ const Navigation = () => {
 
     const [value, setValue] = useState('home');
 
-
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };

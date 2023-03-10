@@ -1,3 +1,6 @@
+// import scss
+import '../src/App.scss'
+
 // library import 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -22,8 +25,9 @@ function App() {
   const [ selected, setSelected ] = useState(false)
 
   return (
-      <Router>
-        <Navigation />
+    <main className={'app'}>
+        <Router>
+
         <Routes>
           <Route path="/" element={<SplashScreen />} />
           <Route path="/onboarding" element={<Onboarding />} />
@@ -35,6 +39,8 @@ function App() {
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </Router>
+    </main>
+
   );
 }
 

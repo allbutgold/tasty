@@ -10,11 +10,10 @@ const Navigation = () => {
                 <Link to='/onboarding'>Onboarding</Link>
                 <Link to='/home'>Home</Link>
                 <Link to='/searchcategory'>searchcategory</Link>
-                <Link to='/searchresult'>serachresult</Link>
+                <Link to='/searchresult'>searchresult</Link>
                 <Link to='/detailspage'>detailspage</Link>
             </nav>
         </section>
-
     );
 }
 

@@ -1,36 +1,40 @@
-// import library
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-// import components
-import CatCards from '../components/catCards/CatCards.jsx'
-import BackButton from '../components/backButton/BackButton.jsx'
+import CatCards from '../components/catCards/CatCards.jsx';
+import BackButton from '../components/backButton/BackButton.jsx';
 
-const SearchCategory = () => {
-    const { cat } = useParams()
-    const [catResult, setCatResult] = useState([])
-
+    const SearchCategory = () => {
+    const { cat } = useParams();
+    const [searchTerm, setSearchTerm] = useState(cat);
+    const [catResult, setCatResult] = useState([]);
 
     useEffect(() => {
-        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${cat}`)
-            .then(res => res.json())
-            .then(data => {
-                setCatResult(data.meals)
-            })
-    }, [cat])
+        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchTerm}`)
+        .then((res) => res.json())
+        .then((data) => {
+            setCatResult(data.meals);
+        });
+    }, [searchTerm]);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSearchTerm(cat);
+    };
 
     return (
         <section>
-            <BackButton />
-            {
-                catResult &&
-                catResult.map(cat => {
-                    return (<CatCards key={cat.idMeal} cat={cat} />)
-                })}
-
+        <BackButton />
+        <form>
+            <input type="search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+            <button type="submit" onClick={handleSubmit}>Search</button>
+        </form>
+        {catResult &&
+            catResult.map((cat) => {
+            return <CatCards key={cat.idMeal} cat={cat} />;
+            })}
         </section>
-
-    );
-}
+        );
+};
 
 export default SearchCategory;

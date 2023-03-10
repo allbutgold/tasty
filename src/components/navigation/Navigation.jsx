@@ -9,9 +9,11 @@ const Navigation = () => {
                 <Link to='/'>SplashScreen</Link>
                 <Link to='/onboarding'>Onboarding</Link>
                 <Link to='/home'>Home</Link>
+                <Link to='/searchcategory'>searchcategory</Link>
+                <Link to='/searchresult'>searchresult</Link>
+                <Link to='/detailspage'>detailspage</Link>
             </nav>
         </section>
-
     );
 }
 

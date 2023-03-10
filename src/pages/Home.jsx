@@ -7,7 +7,7 @@ import CatSlider from '../components/catSlider/CatSlider'
 import SearchByName from "../components/searchByName/SearchByName.jsx";
 import Navigation from "../components/navigation/Navigation.jsx";
 
-const Home = () => {
+const Home = ({ path, setPath }) => {
 
   return (
     <section className="home">
@@ -15,9 +15,9 @@ const Home = () => {
         <SearchByName />
       </article>
       <MealOfTheDay />
-      <AreaSlider />
-      <CatSlider />
-      <Navigation />
+      <AreaSlider path={path} setPath={setPath} />
+      <CatSlider path={path} setPath={setPath} />
+      <Navigation path={path} setPath={setPath} />
     </section>
 
   );

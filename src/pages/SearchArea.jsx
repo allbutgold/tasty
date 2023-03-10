@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 
 // import compoenents
 import AreaCards from '../components/areaCards/AreaCards.jsx';
+import AreaSlider from '../components/areaSlider/AreaSlider.jsx';
 
 
 const SearchArea = () => {
@@ -17,11 +18,12 @@ const SearchArea = () => {
                 setAreaResult(data.meals)
                 console.log(areaResult)
             })
-    }, [areaResult, area])
+    }, [])
 
 
     return (
         <section>
+            <AreaSlider />
             {areaResult &&
                 areaResult.map(area => {
 

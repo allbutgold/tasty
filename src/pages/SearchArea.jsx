@@ -9,7 +9,7 @@ import BackButton from '../components/backButton/BackButton.jsx'
 import Navigation from '../components/navigation/Navigation.jsx';
 
 
-const SearchArea = () => {
+const SearchArea = ({ path, setPath }) => {
     const { area: areaFromParams } = useParams();
     const [searchTerm, setSearchTerm] = useState('');
     const [areaResult, setAreaResult] = useState([]);
@@ -46,7 +46,7 @@ const SearchArea = () => {
 
 
             </section>
-            <Navigation />
+            <Navigation path={path} setPath={setPath} />
         </>
 
     );

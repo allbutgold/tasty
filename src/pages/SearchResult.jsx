@@ -32,7 +32,7 @@ const SearchResult = ({ path, setPath }) => {
                     )
                 })
             }
-            <Navigation />
+            <Navigation path={path} setPath={setPath} />
         </section>
     );
 }

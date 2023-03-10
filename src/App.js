@@ -18,8 +18,6 @@ import ErrorPage from './pages/ErrorPage';
 
 // components import 
 
-
-
 function App() {
 
   const [path, setPath] = useState('home');
@@ -33,8 +31,8 @@ function App() {
           <Route path="/" element={<SplashScreen />} />
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/home" element={<Home path={path} setPath={setPath} />} />
-          <Route path="/searcharea/:area" element={<SearchArea />} />
-          <Route path="/searchcategory/:cat" element={<SearchCategory />} />
+          <Route path="/searcharea/:area" element={<SearchArea path={path} setPath={setPath} />} />
+          <Route path="/searchcategory/:cat" element={<SearchCategory path={path} setPath={setPath} />} />
           <Route path="/searchresult/:search" element={<SearchResult path={path} setPath={setPath} />} />
           <Route path="/detailspage/:id" element={<DetailsPage />} />
           <Route path="/*" element={<ErrorPage />} />

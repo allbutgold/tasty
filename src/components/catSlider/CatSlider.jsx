@@ -31,7 +31,7 @@ const CatSlider = ({ path, setPath }) => {
                     return (
                         toggle ?
                             <Link
-                                onClick={() => setPath('search')}
+                                onClick={() => setPath(prev => prev = 'search')}
                                 to={`/searchcategory/${category.strCategory}`}>
                                 <div>
                                     <img src={category.strCategoryThumb} alt="" />

@@ -20,11 +20,10 @@ const AreaSlider = ({ path, setPath }) => {
                 <button onClick={() => setToggle(!toggle)}>See All</button>
             </div>
             {area.map((item, i) => {
-
                 return (
                     toggle ? <Link
                         to={`/searcharea/${item.strArea}`}
-                        onClick={() => setPath('search')}>
+                        onClick={() => setPath(prev => prev = 'search')}>
                         {item.strArea}
                     </Link>
                         : null
@@ -33,17 +32,17 @@ const AreaSlider = ({ path, setPath }) => {
 
             {toggle ? null : <div>
                 <Link
-                    onClick={() => setPath('search')}
+                    onClick={() => setPath(prev => prev = 'search')}
                     to={'/searcharea/American'}>
                     American
                 </Link>
                 <Link
-                    onClick={() => setPath('search')}
+                    onClick={() => setPath(prev => prev = 'search')}
                     to={'/searcharea/British'}>
                     British
                 </Link>
                 <Link
-                    onClick={() => setPath('search')}
+                    onClick={() => setPath(prev => prev = 'search')}
                     to={'/searcharea/Canadian'}>
                     Canadian
                 </Link>

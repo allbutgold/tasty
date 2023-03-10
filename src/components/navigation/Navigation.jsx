@@ -20,7 +20,6 @@ const Navigation = () => {
 
     const [value, setValue] = useState('home');
 
-
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -30,7 +29,6 @@ const Navigation = () => {
 
             <BottomNavigation sx={{ width: '300px' }} value={value} onChange={handleChange}>
 
-                {/* <Link to='/home'> */}
                 <BottomNavigationAction
                     component={Link}
                     to='/home'
@@ -38,9 +36,7 @@ const Navigation = () => {
                     value="home"
                     icon={<HomeRoundedIcon />}>
                 </BottomNavigationAction>
-                {/* </Link> */}
 
-                {/* <Link to='/searchresult/veg'> */}
                 <BottomNavigationAction
                     component={Link}
                     to='/searchresult/veg'
@@ -49,7 +45,7 @@ const Navigation = () => {
                     icon={<SearchRoundedIcon />}>
                     <Link to='/home' />
                 </BottomNavigationAction>
-                {/* </Link> */}
+
 
                 <Link
                     to='/'

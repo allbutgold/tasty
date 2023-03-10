@@ -2,6 +2,9 @@ import SearchByName from '../components/searchByName/SearchByName'
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
+// import scss
+import styles from '../pages/searchResult.module.scss'
+
 const SearchResult = () => {
     
     const [results, setResults] = useState([]);
@@ -15,7 +18,7 @@ const SearchResult = () => {
     }, [search])
     
     return ( 
-        <section>
+        <section className={styles.searchResult}>
             <SearchByName />
             {
                 results && 

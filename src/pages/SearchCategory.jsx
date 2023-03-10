@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react';
 
 import CatCards from '../components/catCards/CatCards.jsx';
 import BackButton from '../components/backButton/BackButton.jsx';
+import Navigation from '../components/navigation/Navigation.jsx';
 
 
-    const SearchCategory = () => {
+const SearchCategory = () => {
     const { cat } = useParams();
     const [searchTerm, setSearchTerm] = useState(cat);
     const [catResult, setCatResult] = useState([]);
@@ -13,10 +14,10 @@ import BackButton from '../components/backButton/BackButton.jsx';
 
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchTerm}`)
-        .then((res) => res.json())
-        .then((data) => {
-            setCatResult(data.meals);
-        });
+            .then((res) => res.json())
+            .then((data) => {
+                setCatResult(data.meals);
+            });
     }, [searchTerm]);
 
     const handleSubmit = (e) => {
@@ -25,18 +26,22 @@ import BackButton from '../components/backButton/BackButton.jsx';
     };
 
     return (
-        <section>
-        <BackButton />
-        <form>
-            <input type="search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-            <button type="submit" onClick={handleSubmit}>Search</button>
-        </form>
-        {catResult &&
-            catResult.map((cat) => {
-            return <CatCards key={cat.idMeal} cat={cat} />;
-            })}
-        </section>
-        );
+        <>
+            <section>
+                <BackButton />
+                <form>
+                    <input type="search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+                    <button type="submit" onClick={handleSubmit}>Search</button>
+                </form>
+                {catResult &&
+                    catResult.map((cat) => {
+                        return <CatCards key={cat.idMeal} cat={cat} />;
+                    })}
+            </section>
+
+            <Navigation />
+        </>
+    );
 };
 
 export default SearchCategory;

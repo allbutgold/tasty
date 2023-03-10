@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import AreaCards from '../components/areaCards/AreaCards.jsx';
 import AreaSlider from '../components/areaSlider/AreaSlider.jsx';
 import BackButton from '../components/backButton/BackButton.jsx'
+import Navigation from '../components/navigation/Navigation.jsx';
 
 
 const SearchArea = () => {
@@ -28,27 +29,25 @@ const SearchArea = () => {
     }
 
     return (
-        <section>
-            <BackButton />
-            <AreaSlider />
-            <form onSubmit={handleSubmit}>
-            <input type="search" value={searchTerm} onChange={e => setSearchTerm(e.target.value)}/>
-            <button   type='submit'>Search</button>
-            </form>
-            
-            {areaResult &&
-                areaResult.map(area => {
-
-                    return (
-
-                        <AreaCards key={area.idMeal} area={area} />
-
-                    )
-                })}
+        <>
+            <section>
+                <BackButton />
+                <AreaSlider />
+                <form onSubmit={handleSubmit}>
+                    <input type="search" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
+                    <button type='submit'>Search</button>
+                </form>
+                {areaResult &&
+                    areaResult.map(area => {
+                        return (
+                            <AreaCards key={area.idMeal} area={area} />
+                        )
+                    })}
 
 
-        </section>
-
+            </section>
+            <Navigation />
+        </>
 
     );
 }

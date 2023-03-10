@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
+
 
 const SearchByName = () => {
 
@@ -31,9 +33,10 @@ const SearchByName = () => {
             <button onClick={handleSearch}>Search</button>
 
             <ul>
-        {searchResult.map(result => <li key={result.idMeal}><img width="50" src={result.strMealThumb
+        {searchResult.map(result =>
+        <Link to={`/detailspage/${result.idMeal}`}><li key={result.idMeal}><img width="50" src={result.strMealThumb
         } alt={result.strMeal
-        }/>{result.strMeal}</li>)}
+        }/>{result.strMeal}</li></Link> )}
       </ul>
 
         </section>

@@ -4,11 +4,12 @@ import { useState, useEffect } from 'react';
 
 // import components
 import CatCards from '../components/catCards/CatCards.jsx'
+import BackButton from '../components/backButton/BackButton.jsx'
 
 const SearchCategory = () => {
     const { cat } = useParams()
     const [catResult, setCatResult] = useState([])
-    
+
 
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${cat}`)
@@ -16,18 +17,19 @@ const SearchCategory = () => {
             .then(data => {
                 setCatResult(data.meals)
             })
-    }, [])
+    }, [cat])
 
     return (
         <section>
+            <BackButton />
             {
-                catResult && 
-                    catResult.map(cat => {
-                        return( <CatCards key={cat.idMeal} cat={cat} />)
-})}
-            
+                catResult &&
+                catResult.map(cat => {
+                    return (<CatCards key={cat.idMeal} cat={cat} />)
+                })}
+
         </section>
-        
+
     );
 }
 

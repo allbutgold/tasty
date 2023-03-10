@@ -14,7 +14,6 @@ const Navigation = () => {
                 <Link to='/detailspage'>detailspage</Link>
             </nav>
         </section>
-
     );
 }
 

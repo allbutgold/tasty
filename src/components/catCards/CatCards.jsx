@@ -5,7 +5,7 @@ import styles from '../catCards/catCards.module.scss';
 import { Link } from 'react-router-dom';
 
 
-const CarCards = ({cat}) => {
+const CarCards = ({ cat }) => {
     const id = cat.idMeal;
 
 
@@ -13,11 +13,11 @@ const CarCards = ({cat}) => {
         <section className={styles.catCards}>
             <h1>{cat.strMeal}</h1>
             <Link to={`/detailspage/${id}`}>
-            <img src={cat.strMealThumb} alt={cat.strMeal} />
+                <img src={cat.strMealThumb} alt={cat.strMeal} />
             </Link>
         </section>
-        
-        
+
+
     );
 }
 

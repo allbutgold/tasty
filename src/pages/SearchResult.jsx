@@ -2,11 +2,12 @@ import SearchByName from '../components/searchByName/SearchByName'
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Navigation from '../components/navigation/Navigation';
+import BackButton from '../components/backButton/BackButton';
 
 // import scss
 import styles from './searchResult.module.scss'
 
-const SearchResult = ({ path, setPath }) => {
+const SearchResult = () => {
 
     const [results, setResults] = useState([]);
     const { search } = useParams();
@@ -21,6 +22,7 @@ const SearchResult = ({ path, setPath }) => {
     return (
         <section className={styles.searchResult}>
             <SearchByName />
+            <BackButton />
             {
                 results &&
                 results.map(results => {
@@ -32,7 +34,7 @@ const SearchResult = ({ path, setPath }) => {
                     )
                 })
             }
-            <Navigation path={path} setPath={setPath} />
+            <Navigation />
         </section>
     );
 }

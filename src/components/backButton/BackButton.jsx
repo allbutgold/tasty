@@ -5,7 +5,7 @@ const BackButton = () => {
         <section>
             <Link to={'/home'}>Back</Link>
         </section>
-        
+
     );
 }
 

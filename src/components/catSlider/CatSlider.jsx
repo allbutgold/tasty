@@ -6,7 +6,7 @@ TODOS:
     
 */
 
-const CatSlider = ({ path, setPath }) => {
+const CatSlider = () => {
 
     const [cat, setCat] = useState([])
     const [toggle, setToggle] = useState(true);
@@ -30,9 +30,7 @@ const CatSlider = ({ path, setPath }) => {
                 {cat.map((category) => {
                     return (
                         toggle ?
-                            <Link
-                                onClick={() => setPath(prev => prev = 'search')}
-                                to={`/searchcategory/${category.strCategory}`}>
+                            <Link to={`/searchcategory/${category.strCategory}`} >
                                 <div>
                                     <img src={category.strCategoryThumb} alt="" />
                                     {category.strCategory}
@@ -42,19 +40,19 @@ const CatSlider = ({ path, setPath }) => {
 
                 {toggle ? null :
                     <>
-                        <Link to={'/searchcategory/Beef'}>
+                        <Link to={'/searchcategory/Beef'} >
                             <div>
                                 <img src={cat[0].strCategoryThumb} alt="" />
                                 Beef
                             </div>
                         </Link>
-                        <Link to={'/searchcategory/Chicken'}>
+                        <Link to={'/searchcategory/Chicken'} >
                             <div>
                                 <img src={cat[1].strCategoryThumb} alt="" />
                                 Chicken
                             </div>
                         </Link>
-                        <Link to={'/searchcategory/Dessert'}>
+                        <Link to={'/searchcategory/Dessert'} >
                             <div>
                                 <img src={cat[2].strCategoryThumb} alt="" />
                                 Dessert

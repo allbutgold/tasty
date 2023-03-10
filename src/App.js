@@ -2,9 +2,7 @@
 import styles from '../src/App.scss'
 
 // library import 
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // pages import 
 import SplashScreen from './pages/SplashScreen.jsx';
@@ -20,25 +18,22 @@ import ErrorPage from './pages/ErrorPage';
 
 function App() {
 
-  const [path, setPath] = useState('home');
-  console.log(path, 'path');
-
   return (
     <main className={styles.app}>
-        <Router>
+      <Router>
 
         <Routes>
           <Route path="/" element={<SplashScreen />} />
           <Route path="/onboarding" element={<Onboarding />} />
-          <Route path="/home" element={<Home path={path} setPath={setPath} />} />
-          <Route path="/searcharea/:area" element={<SearchArea path={path} setPath={setPath} />} />
-          <Route path="/searchcategory/:cat" element={<SearchCategory path={path} setPath={setPath} />} />
-          <Route path="/searchresult/:search" element={<SearchResult path={path} setPath={setPath} />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/searcharea/:area" element={<SearchArea />} />
+          <Route path="/searchcategory/:cat" element={<SearchCategory />} />
+          <Route path="/searchresult/:search" element={<SearchResult />} />
           <Route path="/detailspage/:id" element={<DetailsPage />} />
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </Router>
-      </main>
+    </main>
   );
 }
 

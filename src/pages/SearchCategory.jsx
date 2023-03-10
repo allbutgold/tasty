@@ -6,11 +6,11 @@ import BackButton from '../components/backButton/BackButton.jsx';
 import Navigation from '../components/navigation/Navigation.jsx';
 
 
-const SearchCategory = ({ path, setPath }) => {
+const SearchCategory = () => {
     const { cat } = useParams();
     const [searchTerm, setSearchTerm] = useState(cat);
     const [catResult, setCatResult] = useState([]);
-    console.log(path, 'asdasd');
+
 
 
     useEffect(() => {
@@ -40,7 +40,7 @@ const SearchCategory = ({ path, setPath }) => {
                     })}
             </section>
 
-            <Navigation path={path} setPath={setPath} />
+            <Navigation />
         </>
     );
 };

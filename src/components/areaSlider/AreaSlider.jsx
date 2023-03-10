@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const AreaSlider = ({ path, setPath }) => {
+const AreaSlider = () => {
 
     const [area, setArea] = useState([]);
     const [toggle, setToggle] = useState(false);
@@ -21,9 +21,7 @@ const AreaSlider = ({ path, setPath }) => {
             </div>
             {area.map((item, i) => {
                 return (
-                    toggle ? <Link
-                        to={`/searcharea/${item.strArea}`}
-                        onClick={() => setPath(prev => prev = 'search')}>
+                    toggle ? <Link to={`/searcharea/${item.strArea}`} >
                         {item.strArea}
                     </Link>
                         : null
@@ -31,19 +29,13 @@ const AreaSlider = ({ path, setPath }) => {
             })}
 
             {toggle ? null : <div>
-                <Link
-                    onClick={() => setPath(prev => prev = 'search')}
-                    to={'/searcharea/American'}>
+                <Link to={'/searcharea/American'}>
                     American
                 </Link>
-                <Link
-                    onClick={() => setPath(prev => prev = 'search')}
-                    to={'/searcharea/British'}>
+                <Link to={'/searcharea/British'}>
                     British
                 </Link>
-                <Link
-                    onClick={() => setPath(prev => prev = 'search')}
-                    to={'/searcharea/Canadian'}>
+                <Link to={'/searcharea/Canadian'}>
                     Canadian
                 </Link>
             </div>}

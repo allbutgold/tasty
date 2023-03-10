@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 
-
-
 const SearchByName = () => {
     const [search, setSearch] = useState()
 
@@ -10,8 +8,8 @@ const SearchByName = () => {
         <section>
             <input type="search" onChange={e => setSearch(e.target.value)} />
             <Link to={`/searchresult/${search}`}>search
-            </Link>
-        </section>
+            </Link >
+        </section >
 
     );
 }

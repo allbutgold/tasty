@@ -30,7 +30,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/searcharea/:area" element={<SearchArea />} />
           <Route path="/searchcategory/:cat" element={<SearchCategory />} />
-          <Route path="/searchresult" element={<SearchResult />} />
+          <Route path="/searchresult/:search" element={<SearchResult />} />
           <Route path="/detailspage/:id" element={<DetailsPage />} />
           <Route path="/*" element={<ErrorPage />} />
         </Routes>

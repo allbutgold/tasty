@@ -29,15 +29,9 @@ const SearchByName = () => {
     return (
         <section>
             <input type="search" onChange={e => setSearch(e.target.value)}/>
-
+            <Link to={`/searchresult/${search}`}>
             <button onClick={handleSearch}>Search</button>
-
-            <ul>
-        {searchResult.map(result =>
-        <Link to={`/detailspage/${result.idMeal}`}><li key={result.idMeal}><img width="50" src={result.strMealThumb
-        } alt={result.strMeal
-        }/>{result.strMeal}</li></Link> )}
-      </ul>
+            </Link>
 
         </section>
     );

@@ -13,7 +13,7 @@ const Navigation = () => {
                 <Link to='/home'>
                     <img src={iconHome} alt="" />
                 </Link>
-                <Link to='/searchresult'>
+                <Link to='/searchResult/veg'>
                     <img src={iconSearch} alt="" />
                 </Link>
                 <Link

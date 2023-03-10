@@ -1,6 +1,10 @@
 // import scss
 import styles from '../details/details.module.scss';
 
+// import libraries
+import { Link } from 'react-router-dom';
+
+
 const Details = ({meal}) => {
     return (
         <section className={styles.details}>
@@ -36,6 +40,7 @@ const Details = ({meal}) => {
                 <h2>Instructions</h2>
                 <p>{meal.strInstructions}</p>
             </article>
+            <Link target="_blank" to={meal.strYoutube}>Video</Link>
         </section>
 
     );

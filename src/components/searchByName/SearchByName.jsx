@@ -9,7 +9,7 @@ const SearchByName = () => {
     return (
         <section>
             <input type="search" onChange={e => setSearch(e.target.value)} />
-            <Link to={`/searchresult/${search}`}>
+            <Link to={`/searchresult/${search}`}>search
             </Link>
         </section>
 

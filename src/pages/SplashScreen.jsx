@@ -1,5 +1,6 @@
 // import libraries
 import { Link } from 'react-router-dom'
+import { gsap } from "gsap";
 
 // import images
 import logoTypo from '../img/logoTypo.png'
@@ -8,6 +9,7 @@ import logoTypo from '../img/logoTypo.png'
 import styles from './splashScreen.module.scss'
 
 const SplashScreen = () => {
+    gsap.to(".tasty", { x: 200 })
     return (
         <Link to='/onboarding' className={styles.splashScreen}>
             <section>

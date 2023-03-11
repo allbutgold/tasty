@@ -1,0 +1,19 @@
+.navigation {
+    nav {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 50px;
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: white;
+
+        >a {
+            >img {
+                width: 32px;
+            }
+        }
+    }
+}

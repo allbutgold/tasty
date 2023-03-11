@@ -13,14 +13,16 @@ import iconShare from '../../img/iconShare.svg'
 const Details = ({ meal }) => {
 
     const [showIngredients, setShowIngredients] = useState(true);
+
+
     console.log(meal);
 
     const ingre = []
     const meas = []
     const results = []
 
-    function Ingredient(incre, meas) {
-        this.ingredient = incre;
+    function Ingredient(ingre, meas) {
+        this.ingredient = ingre;
         this.measurement = meas;
     }
 
@@ -41,7 +43,6 @@ const Details = ({ meal }) => {
     for (let i = 0; i < ingre.length; i++) {
         const ingrediant = new Ingredient(ingre[i], meas[i])
         results.push(ingrediant)
-        console.log(results);
     }
 
     return (
@@ -69,17 +70,18 @@ const Details = ({ meal }) => {
                             {meal.strArea}
                         </Link>
                     </div>
+
                     <div>
                         <img
                             style={{
-                                width: '30px',
+                                width: '33px',
                                 pointerEvents: 'none',
                                 opacity: '60%'
                             }}
                             src={iconShare} alt="" />
                         <img
                             style={{
-                                width: '32px',
+                                width: '33px',
                                 marginLeft: '10px',
                                 pointerEvents: 'none',
                                 opacity: '60%'
@@ -90,29 +92,52 @@ const Details = ({ meal }) => {
 
                 <div id={styles.btnDiv}>
                     <button
-                        className={showIngredients ? styles.btnActive : styles.btnNotActive}
-                        onClick={() => setShowIngredients(!showIngredients)}>Ingredients</button>
+                        className={
+                            showIngredients ?
+                                styles.btnActive :
+                                styles.btnNotActive}
+                        onClick={() => setShowIngredients(!showIngredients)}>
+                        Ingredients
+                    </button>
                     <button
-                        className={showIngredients ? styles.btnNotActive : styles.btnActive}
-                        onClick={() => setShowIngredients(!showIngredients)}>Instructions</button>
+                        className={showIngredients ?
+                            styles.btnNotActive :
+                            styles.btnActive}
+                        onClick={() => setShowIngredients(!showIngredients)}>
+                        Instructions
+                    </button>
                 </div>
-                {showIngredients ? (
-                    <>
-                        {
-                            results.map((result, index) => {
 
-                                return (
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-                                        <p>{result.ingredient}</p>
-                                        <p>{result.measurement}</p>
-                                    </div>
-                                )
-                            })
-                        }
+                {showIngredients ? (
+
+                    <>
+                        <h1>Ingrediants</h1>
+                        <article className={styles.ingreList}>
+                            {
+                                results.map((result, index) => {
+                                    return (
+
+                                        <div className={styles.ingreRow}
+                                            style={{
+                                                display: 'flex',
+                                                justifyContent: 'flex-start',
+                                                width: '80%'
+                                            }}>
+                                            <div className={styles.meas}>
+                                                <p>{result.measurement}</p>
+                                            </div>
+                                            <div className={styles.ingre}>
+                                                <p>{result.ingredient}</p>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </article>
                     </>
                 ) : (
                     <>
-                        <h2>Instructions</h2>
+                        <h1>Instructions</h1>
                         <article>
                             <p>{meal.strInstructions}</p>
                         </article>

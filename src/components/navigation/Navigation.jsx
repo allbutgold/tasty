@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 
-
 import './navigation.modules.scss'
 import iconHome from '../../img/icons/iconHome.svg'
 // import iconHomeSelected from '../../img/icons/iconHomeSelected.svg'
@@ -10,8 +9,6 @@ import iconHeart from '../../img/icons/iconHeart.svg'
 import iconUser from '../../img/icons/iconUser.svg'
 
 const Navigation = () => {
-
-
 
     return (
         <section className='navigation'>

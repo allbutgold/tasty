@@ -13,7 +13,7 @@ import SearchCategory from './pages/SearchCategory.jsx';
 import SearchResult from './pages/SearchResult.jsx';
 import DetailsPage from './pages/DetailsPage.jsx';
 import ErrorPage from './pages/ErrorPage';
-import { gsap } from "gsap";
+
 
 // components import 
 

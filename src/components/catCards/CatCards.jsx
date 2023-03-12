@@ -11,10 +11,11 @@ const CarCards = ({cat}) => {
 
     return (
         <section className={styles.catCards}>
-            <h1>{cat.strMeal}</h1>
+            
             <Link to={`/detailspage/${id}`}>
             <img src={cat.strMealThumb} alt={cat.strMeal} />
             </Link>
+            <h4>{cat.strMeal}</h4>  
         </section>
         
         

@@ -1,3 +1,6 @@
+// import scss 
+import styles from '../pages/searchCategory.module.scss'
+
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -27,7 +30,7 @@ const SearchCategory = () => {
 
     return (
         <>
-            <section>
+            <section className={styles.searchCategory   }>
                 <BackButton />
                 <form>
                     <input type="search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />

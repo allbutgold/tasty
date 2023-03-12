@@ -1,0 +1,38 @@
+.mealOfTheDay {
+    h1 {
+        margin-left: 24px;
+        color: black;
+    }
+    a {
+        text-decoration: none;  
+    }
+
+    article {
+        background-color: #70B9BE;
+        width: 264px;
+        height: 172px;
+        border-radius: 20px;
+        padding: 10px;
+        margin-left: 20px;
+        color: white;
+        background-image: url(../../img/Card.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        h2 {
+            margin-top: 0px;
+            margin-top: 100px;
+            margin-bottom: 8px;
+            font-size: 1rem;
+
+        }
+        div {
+            display: flex;
+            justify-content: flex-start;
+            p {
+                margin-right: 30px;
+                margin-left: 40px;
+            }    
+        }
+    }
+    
+}

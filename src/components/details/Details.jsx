@@ -5,9 +5,6 @@ import styles from '../details/details.module.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-// import components
-import BackButton from '../backButton/BackButton.jsx'
-
 
 const Details = ({meal}) => {
     const [showIngredients, setShowIngredients] = useState(true);

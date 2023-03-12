@@ -37,7 +37,7 @@ const SearchArea = () => {
                 <BackButton />
                 <AreaSlider />
                 <form onSubmit={handleSubmit}>
-                    <input type="search" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
+                    <input type="search" placeholder='🔍' value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
                     <button type='submit'>Search</button>
                 </form>
                 {areaResult &&

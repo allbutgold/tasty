@@ -34,12 +34,13 @@ const SearchArea = () => {
     return (
         <>
             <section className={styles.searchArea}>
-                <BackButton />
-                <AreaSlider />
+                
                 <form onSubmit={handleSubmit}>
                     <input type="search" placeholder='🔍' value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
                     <button type='submit'>Search</button>
                 </form>
+                <BackButton />
+                <AreaSlider />
                 {areaResult &&
                     areaResult.map(area => {
                         return (

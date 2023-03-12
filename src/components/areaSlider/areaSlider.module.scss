@@ -1,10 +1,13 @@
 .areaSlider {
+    max-width: 412px;
     .areaHead {
         display: flex;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 1rem;
+        margin: 0 20px 0 20px;
+        max-height: 40px;
         button {
             color: #69B0B6;
             height: 2rem;
@@ -12,21 +15,50 @@
             background-color: transparent
         }
     }
-}
 
-
-.dropDown {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 1rem;
-    column-gap: .5rem;
-    row-gap: .5rem;
-    a {
-        text-decoration: none;
-        background-color: #69B0B6;
-        color: aliceblue;
-        padding: .4rem 1rem;
-        border-radius: 1rem;
-   
+    .dropDown {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 1rem;
+        column-gap: .2rem;
+        row-gap: .3rem;
+        margin: 20px;
+        a {
+            text-decoration: none;
+            background-color: #69B0B6;
+            color: aliceblue;
+            padding: .4rem 1rem;
+            border-radius: 1rem;
+         }
     }
+
+    .standard {
+        margin: 0 20px 0 20px;
+        display: flex;
+        align-items: center;
+        column-gap: .4rem;
+        max-width: 412px;
+        height: 80px;
+        overflow: auto;
+        padding-left: 1rem;
+        scroll-behavior: smooth;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: inline mandatory;
+        scroll-padding-inline: 1rem;
+
+        a {
+            text-decoration: none ;
+            color: #333;
+            //height: 1.2rem;
+            background-color: #69B0B6;
+            color: aliceblue;
+            padding: .4rem 1rem ;
+            border-radius: 1rem;
+            scroll-snap-align: start;
+        }
+    }
+    .standard::-webkit-scrollbar {
+        display: none;
+    }
+
 }

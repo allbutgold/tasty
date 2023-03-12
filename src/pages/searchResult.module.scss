@@ -1,6 +1,27 @@
 .searchResult {
-    img {
-        width: 100px;
-        height: 100px;
+    a {
+        text-decoration: none;
+        color: black;
+        article {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 1.5rem;
+            box-shadow: rgba(0, 0, 0, 0.226) 0px 7px 16px -5px ;
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 20px;
+            }
+            p {
+                margin: 0 20px 0 40px;
+            }
+        }
     }
+    
+
+    
 }

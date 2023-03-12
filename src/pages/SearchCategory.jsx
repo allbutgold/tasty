@@ -1,3 +1,6 @@
+// import scss 
+import styles from '../pages/searchCategory.module.scss'
+
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -27,12 +30,12 @@ const SearchCategory = () => {
 
     return (
         <>
-            <section>
+            <section className={styles.searchCategory   }>
                 <BackButton />
                 <form>
-                    <input type="search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+                    <input type="search" placeholder='🔍' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
                     <button type="submit" onClick={handleSubmit}>Search</button>
-                </form>
+                </form> 
                 {catResult &&
                     catResult.map((cat) => {
                         return <CatCards key={cat.idMeal} cat={cat} />;

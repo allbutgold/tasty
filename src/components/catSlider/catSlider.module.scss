@@ -1,0 +1,82 @@
+.catSlider {
+    max-width: 412px;
+    .catHead{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        button {
+            color: #69B0B6;
+            height: 2rem;
+            border: none;
+            background-color: transparent
+        }
+    }
+
+    .sliderContainer {
+
+        max-width: 412px;
+        overflow-x: auto;
+        padding: 1rem;
+        scroll-behavior: smooth;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: inline mandatory;
+        scroll-padding-inline: 1rem;
+        .sliderStandard{
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            //border: 1px solid #333;
+            //padding: 1rem;
+            row-gap: 1rem;
+            //column-gap: .3rem;
+
+            a {
+                text-decoration: none;
+                color: #333;
+            }
+            div {
+                width: 90px;
+                padding: 1rem;
+                //background-color: aliceblue;
+                border-radius: 1rem;
+                box-shadow: rgba(0, 0, 0, 0.226) 0px 8px 20px -10px ;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        
+        .sliderSeeAll{
+            display: flex;
+            column-gap: 1rem;
+            a {
+                text-decoration: none;
+                color: #333;
+            }
+            div {
+                scroll-snap-align: start;
+                width: 200px;
+                padding: 1rem;
+                text-align: center;
+                border-radius: 1.5rem;
+                box-shadow: rgba(0, 0, 0, 0.226) 0px 7px 16px -5px ;
+
+                img {
+                    width: 100%
+                }
+                
+            }
+        }
+    }
+    //Chrome / safari browser support
+    .sliderContainer::-webkit-scrollbar {
+        display: none;
+    }
+    //Firefox browser support
+    .sliderContainer{
+        scrollbar-width: none;
+    }
+}
+

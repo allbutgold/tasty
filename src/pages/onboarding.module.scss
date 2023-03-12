@@ -12,7 +12,7 @@
         background-image: url(../img/onboardingBackground.png);
         
         background-position: 0px 100px ;
-        background-color: #70B9BE;
+        background-color: rgb(113	187	191	)	;
         background-repeat: no-repeat;
         div {
             height: 100vh;
@@ -26,7 +26,7 @@
             background-color: white;
             bottom: 0;
             position: absolute;
-            border-radius: 20px;
+            border-radius: 20px 20px 0 0;
             padding: 20px;
             h1 {
                 font-family: montserrat;

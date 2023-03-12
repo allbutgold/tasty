@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 
+import styles from './catSlider.module.scss';
 /* 
 TODOS:
     
 */
 
-const CatSlider = () => {
+const CatSlider = ({ path, setPath }) => {
 
     const [cat, setCat] = useState([])
     const [toggle, setToggle] = useState(true);
@@ -20,46 +21,49 @@ const CatSlider = () => {
     console.log(cat);
 
     return (
-        <section className="catSlider">
-            <div>
+        <section className={styles.catSlider}>
+            <div className={styles.catHead}>
                 <h2>Categories</h2>
                 <button onClick={() => setToggle(!toggle)}>See All</button>
             </div>
 
-            <article style={{ display: 'flex' }}>
-                {cat.map((category) => {
+            <article className={styles.sliderContainer}>
+                <div className={styles.sliderSeeAll}>
+                  {cat.map((category) => {
+
                     return (
                         toggle ?
+                            <Link
+                                onClick={() => setPath('search')}
+                                to={`/searchcategory/${category.strCategory}`}>
+                                <div>
+                                    <img src={category.strCategoryThumb} alt="" />
+                                    <p>{category.strCategory}</p>
+                                </div>
+                            </Link> 
+                            : null)
+                   })}
+                </div>
+
+                  <div className={styles.sliderStandard}>
+                  {cat.map((category) => {
+                    return (
+                
+                        toggle ? null :
+
+                        
                             <Link to={`/searchcategory/${category.strCategory}`}>
                                 <div>
                                     <img src={category.strCategoryThumb} alt="" />
-                                    {category.strCategory}
+                                    <p>{category.strCategory}</p>
                                 </div>
-                            </Link> : null)
-                })}
+                            </Link> 
+                        
+                             )
+                  })}
+                 </div>
 
-                {toggle ? null :
-                    <>
-                        <Link to={'/searchcategory/Beef'}>
-                            <div>
-                                <img src={cat[0].strCategoryThumb} alt="" />
-                                Beef
-                            </div>
-                        </Link>
-                        <Link to={'/searchcategory/Chicken'}>
-                            <div>
-                                <img src={cat[1].strCategoryThumb} alt="" />
-                                Chicken
-                            </div>
-                        </Link>
-                        <Link to={'/searchcategory/Dessert'}>
-                            <div>
-                                <img src={cat[2].strCategoryThumb} alt="" />
-                                Dessert
-                            </div>
-                        </Link>
-                    </>
-                }
+  
             </article>
         </section >
     );

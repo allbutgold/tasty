@@ -1,28 +1,20 @@
+// import libraries
 import { Link } from 'react-router-dom'
 
-import LogoSymbol from '../img/logoSymbol.png'
-import LogoTypo from '../img/logoTypo.png'
+// import images
+import Logo from '../img/Logo.svg'
 
-/* 
-TODOS:
-    TODO: import and add vector graphics from src/img
-    TODO: remove inline styles and add them from the module 
- */
+// import scss
+import styles from './splashScreen.module.scss'
 
 const SplashScreen = () => {
     return (
-        <Link to='/onboarding'>
-            <section
-                style={{ backgroundColor: '#70B9BE' }}
-                className="splashScreen" >
-                <div style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    maxWidth: '300px'
-                }}>
-                    <img src={LogoSymbol} alt="" />
-                    <img src={LogoTypo} alt="" />
-                </div>
+        <Link to='/onboarding' className={styles.splashScreen}>
+            <section>
+                    <h1>TASTY</h1>
+                    <img src={Logo} alt="" />
+                    
+            
 
             </section>
         </Link >

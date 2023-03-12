@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 
 // import components
 import Details from '../components/details/Details.jsx'
+import Navigation from '../components/navigation/Navigation.jsx';
 
 const DetailsPage = () => {
     const { id } = useParams();
@@ -24,6 +25,7 @@ const DetailsPage = () => {
                     return (<Details key={meal.idMeal} meal={meal} />)
                 })
             }
+            <Navigation />
         </section>
     );
 }

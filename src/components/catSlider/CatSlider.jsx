@@ -7,7 +7,7 @@ TODOS:
     
 */
 
-const CatSlider = () => {
+const CatSlider = ({ path, setPath }) => {
 
     const [cat, setCat] = useState([])
     const [toggle, setToggle] = useState(true);
@@ -33,7 +33,9 @@ const CatSlider = () => {
 
                     return (
                         toggle ?
-                            <Link to={`/searchcategory/${category.strCategory}`}>
+                            <Link
+                                onClick={() => setPath('search')}
+                                to={`/searchcategory/${category.strCategory}`}>
                                 <div>
                                     <img src={category.strCategoryThumb} alt="" />
                                     <p>{category.strCategory}</p>

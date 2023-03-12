@@ -1,24 +1,40 @@
 //import library
+// import { useState } from 'react'
+
 import { Link } from 'react-router-dom'
 
 import iconHome from '../../img/icons/iconHome.svg'
+import iconHomeSelected from '../../img/icons/iconHomeSelected.svg'
 import iconSearch from '../../img/icons/iconSearch.svg'
 import iconHeart from '../../img/icons/iconHeart.svg'
 import iconUser from '../../img/icons/iconUser.svg'
 
+const Navigation = ({ path, setPath }) => {
 
-const Navigation = () => {
-
-
-
+    console.log('navvvvv');
     return (
         <section className='navigation'>
             <nav>
-                <Link to='/home'>
-                    <img src={iconHome} alt="" />
+                <Link
+                    onClick={() => setPath(prev => prev = 'home')}
+                    to='/home'>
+                    <div>
+                        <img src={
+                            path === 'home' ?
+                                iconHomeSelected :
+                                iconHome}
+                            alt="" />
+                        {path === 'home' ? <p style={{ fontSize: '0.6em' }}>Home</p> : null}
+                    </div>
                 </Link>
-                <Link to='/searchResult/veg'>
-                    <img src={iconSearch} alt="" />
+
+                <Link
+                    onClick={() => setPath(prev => prev = 'search')}
+                    to='/searchResult/veg'>
+                    <div>
+                        {path === 'search' ? <p>Search</p> : null}
+                        <img src={iconSearch} alt="" />
+                    </div>
                 </Link>
                 <Link
                     to='/'
@@ -29,7 +45,7 @@ const Navigation = () => {
                     <img src={iconHeart} alt="" />
                 </Link>
                 <Link
-                    to='/searchcategory'
+                    to='/'
                     style={{
                         pointerEvents: 'none',
                         opacity: '60%'
@@ -37,7 +53,7 @@ const Navigation = () => {
                     <img src={iconUser} alt="" />
                 </Link>
             </nav>
-        </section>
+        </section >
     );
 }
 

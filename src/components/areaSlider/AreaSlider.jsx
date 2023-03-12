@@ -61,6 +61,7 @@ const AreaSlider = () => {
                 <Link to={'/searcharea/British'}>British</Link>
                 <Link to={'/searcharea/Canadian'}>Canadian</Link>
         </div>*/}
+
         </section>
 
     );

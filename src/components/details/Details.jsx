@@ -14,9 +14,6 @@ const Details = ({ meal }) => {
 
     const [showIngredients, setShowIngredients] = useState(true);
 
-
-    console.log(meal);
-
     const ingre = []
     const meas = []
     const results = []
@@ -74,14 +71,14 @@ const Details = ({ meal }) => {
                     <div>
                         <img
                             style={{
-                                width: '33px',
+                                width: '32px',
                                 pointerEvents: 'none',
                                 opacity: '60%'
                             }}
                             src={iconShare} alt="" />
                         <img
                             style={{
-                                width: '33px',
+                                width: '32px',
                                 marginLeft: '10px',
                                 pointerEvents: 'none',
                                 opacity: '60%'

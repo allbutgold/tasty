@@ -1,5 +1,5 @@
 .catSlider {
-    max-width: 412px;
+    width: 100%;
     .catHead{
         display: flex;
         justify-content: space-between;
@@ -15,7 +15,7 @@
 
     .sliderContainer {
 
-        max-width: 412px;
+        max-width: 100%;
         overflow-x: auto;
         padding: 1rem;
         scroll-behavior: smooth;
@@ -75,8 +75,9 @@
         display: none;
     }
     //Firefox browser support
-    .sliderContainer{
+    .sliderContainer {
         scrollbar-width: none;
+        overflow: -moz-scrollbars-none;
     }
 }
 

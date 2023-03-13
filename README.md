@@ -43,6 +43,12 @@ The Tasty App uses SCSS for styling. The styles are defined in separate SCSS fil
 
 The Tasty App uses React Router to handle navigation between pages. Each page is associated with a specific route, and the Routes component is used to define the app's routing.
 
+<h2>Contributing Programmers</h2>
+
+- nizza1
+- allbutgold
+- domieee
+
 
 
 

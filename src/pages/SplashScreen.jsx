@@ -1,6 +1,6 @@
 // import libraries
 import { Link } from 'react-router-dom'
-import { gsap } from "gsap";
+
 
 // import images
 import logo from '../img/Logo.svg'

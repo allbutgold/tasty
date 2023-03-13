@@ -1,8 +1,8 @@
 // import scss
-import styles from '../src/App.scss'
+import styles from './App.scss'
 
 // library import 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // pages import 
 import SplashScreen from './pages/SplashScreen.jsx';
@@ -19,12 +19,10 @@ import ErrorPage from './pages/ErrorPage';
 
 function App() {
 
-
-
   return (
-    <main className={styles.app}>
-      <Router>
 
+    <BrowserRouter>
+      <main className={styles.app}>
         <Routes>
           <Route path="/" element={<SplashScreen />} />
           <Route path="/onboarding" element={<Onboarding />} />
@@ -35,8 +33,9 @@ function App() {
           <Route path="/detailspage/:id" element={<DetailsPage />} />
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
-      </Router>
-    </main>
+      </main>
+    </BrowserRouter >
+
   );
 }
 

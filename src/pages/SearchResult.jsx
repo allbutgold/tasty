@@ -29,8 +29,12 @@ const SearchResult = () => {
                     return (
                         <Link
                             to={`/detailspage/${results.idMeal}`}>
-                            <img src={results.strMealThumb} alt="" />
-                            <h1>{results.strMeal}</h1></Link>
+                                <article>
+                                    <img src={results.strMealThumb} alt="" />
+                                    <h1>{results.strMeal}</h1>
+                                    <p>{results.strCategory}</p>
+                                </article>
+                            </Link>
                     )
                 })
             }

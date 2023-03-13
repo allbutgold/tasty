@@ -8,6 +8,9 @@ import AreaSlider from '../components/areaSlider/AreaSlider.jsx';
 import BackButton from '../components/backButton/BackButton.jsx'
 import Navigation from '../components/navigation/Navigation.jsx';
 
+// import scss
+import styles from '../pages/searchArea.module.scss'
+
 
 const SearchArea = () => {
     const { area: areaFromParams } = useParams();
@@ -30,13 +33,14 @@ const SearchArea = () => {
 
     return (
         <>
-            <section>
-                <BackButton />
-                <AreaSlider />
+            <section className={styles.searchArea}>
+                
                 <form onSubmit={handleSubmit}>
-                    <input type="search" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
+                    <input type="search" placeholder='🔍' value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
                     <button type='submit'>Search</button>
                 </form>
+                <BackButton />
+                <AreaSlider />
                 {areaResult &&
                     areaResult.map(area => {
                         return (

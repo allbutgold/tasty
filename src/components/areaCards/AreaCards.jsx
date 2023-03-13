@@ -12,7 +12,7 @@ const AreaCards = ({ area }) => {
             <Link to={`/detailspage/${id}`}>
                 <img src={area.strMealThumb} alt={area.strMeal} />
             </Link>
-            <h1>{area.strMeal}</h1>
+            <h4>{area.strMeal}</h4>
         </section>
 
     );

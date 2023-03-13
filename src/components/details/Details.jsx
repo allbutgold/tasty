@@ -7,10 +7,12 @@ import { Parallax } from 'react-parallax';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
+
 import iconHeart from '../../img/icons/iconHeart.svg'
 import iconShare from '../../img/iconShare.svg'
 
 const Details = ({ meal }) => {
+
 
     const [showIngredients, setShowIngredients] = useState(true);
 

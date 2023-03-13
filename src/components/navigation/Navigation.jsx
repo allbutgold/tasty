@@ -11,35 +11,33 @@ import iconUser from '../../img/icons/iconUser.svg'
 const Navigation = () => {
 
     return (
-        <section className='navigation'>
-            <nav>
-                <Link
-                    to='/home'>
-                    <img src={iconHome} alt='' />
-                </Link>
+        <nav>
+            <Link
+                to='/home'>
+                <img src={iconHome} alt='' />
+            </Link>
 
-                <Link
-                    to='/searchResult/veg'>
-                    <img src={iconSearch} alt="" />
-                </Link>
-                <Link
-                    to='/'
-                    style={{
-                        pointerEvents: 'none',
-                        opacity: '60%'
-                    }}>
-                    <img src={iconHeart} alt="" />
-                </Link>
-                <Link
-                    to='/'
-                    style={{
-                        pointerEvents: 'none',
-                        opacity: '60%'
-                    }}>
-                    <img src={iconUser} alt="" />
-                </Link>
-            </nav>
-        </section >
+            <Link
+                to='/searchResult/veg'>
+                <img src={iconSearch} alt="" />
+            </Link>
+            <Link
+                to='/'
+                style={{
+                    pointerEvents: 'none',
+                    opacity: '60%'
+                }}>
+                <img src={iconHeart} alt="" />
+            </Link>
+            <Link
+                to='/'
+                style={{
+                    pointerEvents: 'none',
+                    opacity: '60%'
+                }}>
+                <img src={iconUser} alt="" />
+            </Link>
+        </nav>
     );
 }
 

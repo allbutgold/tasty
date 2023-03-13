@@ -5,7 +5,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 20px 0 20px;
+        padding-left: 1rem;
         max-height: 40px;
         button {
             color: #69B0B6;
@@ -21,7 +21,6 @@
         padding-left: 1rem;
         column-gap: .2rem;
         row-gap: .3rem;
-        margin:  0 20px 0 0;
         a {
             text-decoration: none;
             background-color: #69B0B6;
@@ -32,7 +31,6 @@
     }
 
     .standard {
-        margin: 0 20px 0 20px;
         display: flex;
         align-items: center;
         column-gap: .4rem;
@@ -58,6 +56,10 @@
     }
     .standard::-webkit-scrollbar {
         display: none;
+    }
+    .standard {
+        scrollbar-width: none;
+        overflow: -moz-scrollbars-none;
     }
 
 }

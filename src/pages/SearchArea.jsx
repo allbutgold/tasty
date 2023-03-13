@@ -44,7 +44,9 @@ const SearchArea = () => {
                 {areaResult &&
                     areaResult.map(area => {
                         return (
-                            <AreaCards key={area.idMeal} area={area} />
+                            <AreaCards
+                                key={area.idMeal}
+                                area={area} />
                         )
                     })}
 

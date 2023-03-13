@@ -19,7 +19,6 @@ const DetailsPage = () => {
 
     return (
         <section>
-            <h1>Details Page</h1>
             {
                 meal && meal.map(meal => {
                     return (<Details key={meal.idMeal} meal={meal} />)

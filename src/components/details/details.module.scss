@@ -1,41 +1,189 @@
+@font-face {
+    font-family: Mondserat;
+    src: url(../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+// VARIABLES
+
+$mondserat: Mondserat;
+
+// MARGIN
+$margin-tight: 20px;
+$margin-small: 10px;
+
+// FONT SIZES
+$font-size-h1: 1.375em;
+$font-size-h2: 1.125em;
+$font-size-secondary: 0.9em;
+
+// COLOR CODES
+
 .details {
     img {
-        width: 350px;
+        width: 375px;
         height: 100%;
+    }
+
+    >div {
+        >div {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 100%);
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            h1 {
+                font-family: $mondserat;
+                margin-top: -10px;
+                font-size: $font-size-h1;
+                width: 100%;
+                text-align: center;
+                color: #F1F5F5;
+            }
+
+            >div {
+                justify-items: flex-end;
+                align-self: flex-end;
+            }
         }
+    }
 }
+
 .detailsContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
     border-radius: 20px 20px 0 0;
     background-color: white;
     top: -60px;
     position: relative;
-    padding: 20px;
-    div {
-        height: 20px;
+    padding: 20px 10px 0px 20px;
+
+    .categorys {
+        display: flex;
+
+        >p {
+            color: #97A2B0;
+        }
     }
+
+    .tag {
+        font-size: $font-size-secondary;
+        font-family: Roboto;
+        text-align: center;
+        margin-block: 20px;
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 1px solid #97A2B0;
+        background-color: #97A2B0;
+        color: #fff;
+        border-radius: 20px;
+
+        &:nth-child(1) {
+            margin-right: 10px;
+        }
+    }
+
     h1 {
-        margin-top: 20px;
-        font-size: 1.5rem;
+        font-family: $mondserat;
+        font-size: $font-size-h2;
+        line-height: 22px;
+        text-align: center;
+        margin-block: $margin-tight;
+        font-size: 22px;
         width: 100%;
+        color: #042628;
     }
-    p {
-        width: 100%;
+
+    .ingreList {
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
     }
+
+    .ingreRow {
+        max-height: 22.5px;
+
+
+        .ingre {
+            width: fit-content;
+        }
+
+        .meas {
+            width: 110px;
+        }
+
+        .ingre,
+        .meas {
+            >p {
+                font-family: Roboto, $mondserat;
+                font-size: $font-size-secondary;
+                color: #042628;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 20px;
+        }
+    }
+
     #btnDiv {
-        background-color: grey;
         height: 50px;
         width: 250px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
+
         button {
-            margin-right: 10px;
-            border-radius: 10px;
-            height: 40px;
+            cursor: pointer;
+            border: 1px #042628 solid;
+            padding: 10px 30px;
+            font-family: Roboto;
+            font-size: 0.9em;
+
+            &:nth-child(1) {
+                border-radius: 30px 0px 0px 30px;
+            }
+
+            &:nth-child(2) {
+                border-radius: 0px 30px 30px 0px;
+            }
         }
     }
+
+    article {
+
+
+        >p {
+            font-size: $font-size-secondary;
+        }
+    }
+
+    >a {
+        font-family: Roboto;
+        font-size: $font-size-secondary;
+        margin-block: 25px 20px;
+        padding: 10px 70px;
+        text-decoration: none;
+        background-color: #042628;
+        color: #F1F5F5;
+        border-radius: 30px;
+    }
+}
+
+.btnNotActive {
+    color: #042628;
+    background-color: #F1F5F5;
+
+}
+
+.btnActive {
+    pointer-events: none;
+    color: #F1F5F5;
+    background-color: #042628;
+    opacity: 90%;
 }

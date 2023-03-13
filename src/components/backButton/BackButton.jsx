@@ -6,7 +6,7 @@ const BackButton = () => {
         <section className={styles.backButton}>
             <Link to={'/home'}>&larr; go to home</Link>
         </section>
-        
+
     );
 }
 

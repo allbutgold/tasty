@@ -1,60 +1,151 @@
 // import scss
 import styles from '../details/details.module.scss';
+import { Parallax } from 'react-parallax';
+
 
 // import libraries
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 
-const Details = ({meal}) => {
+import iconHeart from '../../img/icons/iconHeart.svg'
+import iconShare from '../../img/iconShare.svg'
+
+const Details = ({ meal }) => {
+
+
     const [showIngredients, setShowIngredients] = useState(true);
+
+    const ingre = []
+    const meas = []
+    const results = []
+
+    function Ingredient(ingre, meas) {
+        this.ingredient = ingre;
+        this.measurement = meas;
+    }
+
+    const value = Object.values(meal)
+
+    for (let i = 9; i < 28; i++) {
+        if (value[i] !== null && value[i] !== '') {
+            ingre.push(value[i])
+        }
+    }
+
+    for (let i = 29; i < 48; i++) {
+        if (value[i] !== null && value[i] !== '') {
+            meas.push(value[i])
+        }
+    }
+
+    for (let i = 0; i < ingre.length; i++) {
+        const ingrediant = new Ingredient(ingre[i], meas[i])
+        results.push(ingrediant)
+    }
 
     return (
         <section className={styles.details}>
-            <img src={meal.strMealThumb} alt={meal.strMeal} />
-            <article className={styles.detailsContainer}>
-                <div></div>
+            <Parallax
+                blur={{ min: -17, max: 17 }}
+                bgImage={meal.strMealThumb}
+                bgImageAlt={meal.strMeal}
+                bgImageStyle={{ maxHeight: '400px' }}
+                strength={90}>
                 <h1>{meal.strMeal}</h1>
-                <h4>{meal.strCategory}</h4>
-                <p>{meal.strArea}</p>
-                <div id={styles.btnDiv}>
-                    <button onClick={() => setShowIngredients(true)}>Ingredients</button>
-                    <button onClick={() => setShowIngredients(false)}>Instructions</button>
+            </Parallax>
+
+            <article className={styles.detailsContainer}>
+                <div style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly' }}>
+                    <div className={styles.categorys}>
+                        <Link
+                            to={`/searchcategory/${meal.strCategory}`}
+                            className={styles.tag}>
+                            {meal.strCategory}
+                        </Link>
+                        <Link
+                            to={`/searcharea/${meal.strArea}`}
+                            className={styles.tag}>
+                            {meal.strArea}
+                        </Link>
+                    </div>
+
+                    <div>
+                        <img
+                            style={{
+                                width: '32px',
+                                pointerEvents: 'none',
+                                opacity: '60%'
+                            }}
+                            src={iconShare} alt="" />
+                        <img
+                            style={{
+                                width: '32px',
+                                marginLeft: '10px',
+                                pointerEvents: 'none',
+                                opacity: '60%'
+                            }}
+                            src={iconHeart} alt="" />
+                    </div>
                 </div>
+
+                <div id={styles.btnDiv}>
+                    <button
+                        className={
+                            showIngredients ?
+                                styles.btnActive :
+                                styles.btnNotActive}
+                        onClick={() => setShowIngredients(!showIngredients)}>
+                        Ingredients
+                    </button>
+                    <button
+                        className={showIngredients ?
+                            styles.btnNotActive :
+                            styles.btnActive}
+                        onClick={() => setShowIngredients(!showIngredients)}>
+                        Instructions
+                    </button>
+                </div>
+
                 {showIngredients ? (
-                <article>
-                    <h2>Ingredients</h2>
-                    <h4>{`${meal.strIngredient1} ${meal.strMeasure1}`}</h4>
-                    <h4>{`${meal.strIngredient2} ${meal.strMeasure2}`}</h4>
-                    <h4>{`${meal.strIngredient3} ${meal.strMeasure3}`}</h4>
-                    <h4>{`${meal.strIngredient4} ${meal.strMeasure4}`}</h4>
-                    <h4>{`${meal.strIngredient5} ${meal.strMeasure5}`}</h4>
-                    <h4>{`${meal.strIngredient6} ${meal.strMeasure6}`}</h4>
-                    <h4>{`${meal.strIngredient7} ${meal.strMeasure7}`}</h4>
-                    <h4>{`${meal.strIngredient8} ${meal.strMeasure8}`}</h4>
-                    <h4>{`${meal.strIngredient9} ${meal.strMeasure9}`}</h4>
-                    <h4>{`${meal.strIngredient10} ${meal.strMeasure10}`}</h4>
-                    <h4>{`${meal.strIngredient11} ${meal.strMeasure11}`}</h4>
-                    <h4>{`${meal.strIngredient12} ${meal.strMeasure12}`}</h4>
-                    <h4>{`${meal.strIngredient13} ${meal.strMeasure13}`}</h4>
-                    <h4>{`${meal.strIngredient14} ${meal.strMeasure14}`}</h4>
-                    <h4>{`${meal.strIngredient15} ${meal.strMeasure15}`}</h4>
-                    <h4>{`${meal.strIngredient16} ${meal.strMeasure16}`}</h4>
-                    <h4>{`${meal.strIngredient17} ${meal.strMeasure17}`}</h4>
-                    <h4>{`${meal.strIngredient18} ${meal.strMeasure18}`}</h4>
-                    <h4>{`${meal.strIngredient19} ${meal.strMeasure19}`}</h4>
-                    <h4>{`${meal.strIngredient20} ${meal.strMeasure20}`}</h4>
-                </article>
+
+                    <>
+                        <h1>Ingrediants</h1>
+                        <article className={styles.ingreList}>
+                            {
+                                results.map((result, index) => {
+                                    return (
+
+                                        <div className={styles.ingreRow}
+                                            style={{
+                                                display: 'flex',
+                                                justifyContent: 'flex-start',
+                                                width: '80%'
+                                            }}>
+                                            <div className={styles.meas}>
+                                                <p>{result.measurement}</p>
+                                            </div>
+                                            <div className={styles.ingre}>
+                                                <p>{result.ingredient}</p>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </article>
+                    </>
                 ) : (
-                <article>
-                    <h2>Instructions</h2>
-                    <p>{meal.strInstructions}</p>
-                </article>
+                    <>
+                        <h1>Instructions</h1>
+                        <article>
+                            <p>{meal.strInstructions}</p>
+                        </article>
+                    </>
                 )}
                 <Link target="_blank" to={meal.strYoutube}>Video</Link>
             </article>
 
-        </section>
+        </section >
 
     );
 }

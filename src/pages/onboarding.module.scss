@@ -54,3 +54,25 @@
         }
     
 }
+
+@media screen and (min-width: 500px) {
+    .onboarding {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        div {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 100px;
+        }
+        article {
+            width: 60%;
+            margin-bottom: 100px;
+            border-radius: 20px;
+        }
+    }
+    
+}

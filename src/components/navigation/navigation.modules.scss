@@ -1,0 +1,20 @@
+nav {
+    position: fixed;
+
+    bottom: 0;
+    height: 50px;
+    display: flex;
+
+    max-width: 375px;
+    width: 100%;
+    margin-inline: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #E6EBF2;
+
+    >a {
+        >img {
+            width: 32px;
+        }
+    }
+}

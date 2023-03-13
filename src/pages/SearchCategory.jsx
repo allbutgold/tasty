@@ -15,11 +15,12 @@ const SearchCategory = () => {
     const [catResult, setCatResult] = useState([]);
 
 
+
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchTerm}`)
             .then((res) => res.json())
             .then((data) => {
-                setCatResult(data.meals);
+                setCatResult(data.meals)
             });
     }, [searchTerm]);
 

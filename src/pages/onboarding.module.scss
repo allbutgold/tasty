@@ -21,6 +21,7 @@
         }
         article {
             display: flex;
+            max-width: 300px;
             justify-content: center;
             flex-wrap: wrap;
             background-color: white;

@@ -25,7 +25,7 @@ const MealOfTheDay = () => {
     return (
         <section className={styles.mealOfTheDay}>
             <Link to={`/detailspage/${id}`} >
-                <h1>Meal of the day component</h1>
+                <h1>Meal of the day</h1>
                 <article>
                 <h2>{randomMeal.strMeal}</h2>
                 <div>

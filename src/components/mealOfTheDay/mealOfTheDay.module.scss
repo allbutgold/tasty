@@ -1,39 +1,52 @@
+@font-face {
+    font-family: Mondserat;
+    src: url(../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
 .mealOfTheDay {
-    h1 {
-        margin-left: 24px;
-        color: black;
+
+    h2 {
+        font-family: Mondserat;
+        margin-left: 20px;
+        color: #042628;
+        margin-block: 10px;
+        font-size: 1.3em;
     }
+
     a {
-        text-decoration: none;  
+        text-decoration: none;
     }
 
     article {
         background-color: #70B9BE;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         width: 264px;
         height: 172px;
         border-radius: 20px;
-        padding: 10px;
         margin-left: 20px;
         color: white;
         background-image: url(../../img/Card.svg);
         background-size: cover;
         background-repeat: no-repeat;
-        h2 {
-            height: 60px;
-            max-width: 150px;
-            margin-top: 0px;
-            margin-top: 60px;
-            margin-bottom: 8px;
-            font-size: 1rem;
+
+
+        .randomMeal {
+            font-size: 1.125em;
+            margin-top: -20px;
+            font-weight: bold;
         }
-        div {
+
+        >div {
             display: flex;
-            justify-content: flex-start;
+            justify-content: flex-end;
+
             p {
                 margin-right: 30px;
                 margin-left: 40px;
-            }    
+            }
         }
     }
-    
+
 }

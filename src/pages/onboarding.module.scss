@@ -6,54 +6,60 @@
 }
 
 .onboarding {
-        
+    height: 100vh;
+    background-size: 100%;
+    background-image: url(../img/onboardingBackground.png);
+
+    background-position: 0px 100px;
+    background-color: rgb(113 187 191);
+    background-repeat: no-repeat;
+
+    div {
         height: 100vh;
-        background-size: 100%;
-        background-image: url(../img/onboardingBackground.png);
-        
-        background-position: 0px 100px ;
-        background-color: rgb(113	187	191	)	;
-        background-repeat: no-repeat;
-        div {
-            height: 100vh;
-            background-size: contain;
-            background-image: url(../img/Pattern.svg);
+        background-size: contain;
+        background-image: url(../img/Pattern.svg);
+        display: flex;
+        justify-content: center;
+    }
+
+    article {
+        display: flex;
+        max-width: 300px;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: white;
+        bottom: 0;
+        position: absolute;
+        border-radius: 20px 20px 0 0;
+        padding: 20px;
+
+        h1 {
+            font-family: montserrat;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 0px;
         }
-        article {
-            display: flex;
-            max-width: 300px;
-            justify-content: center;
-            flex-wrap: wrap;
-            background-color: white;
-            bottom: 0;
-            position: absolute;
-            border-radius: 20px 20px 0 0;
-            padding: 20px;
-            h1 {
-                font-family: montserrat;
-                font-weight: 700;
-                font-size: 1.3rem;
-                margin-bottom: 0px;
-            }
-            p {
-                font-family: montserrat;
-                font-weight: 400;
-                text-align: center;
-                color: #97A2B0;
-            }
-            button {
-                width: 300px;
-                height: 50px;
-                background-color: black;
-                border: none;
-                border-radius: 20px;
-                color: white;
-                font-family: montserrat;
-                font-weight: 700;
-                
-            }
+
+        p {
+            font-family: montserrat;
+            font-weight: 400;
+            text-align: center;
+            color: #97A2B0;
         }
-    
+
+        button {
+            width: 300px;
+            height: 50px;
+            background-color: black;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-family: montserrat;
+            font-weight: 700;
+
+        }
+    }
+
 }
 
 @media screen and (min-width: 500px) {
@@ -61,6 +67,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+
         div {
             width: 100vw;
             display: flex;
@@ -69,11 +76,36 @@
             flex-wrap: wrap;
             margin: 100px;
         }
+
         article {
+
             width: 60%;
             margin-bottom: 100px;
             border-radius: 20px;
         }
     }
-    
+
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 480px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 468px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .onboarding {
+        background-position: center 80%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .onboarding {
+        background-size: 85%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

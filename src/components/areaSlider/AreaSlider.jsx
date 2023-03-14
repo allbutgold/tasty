@@ -25,34 +25,38 @@ const AreaSlider = () => {
             </div>
 
 
-            <div className={styles.dropDown}>
+            <div className={styles.dropDown}
+                style={toggle ? null : { height: '0px' }}>
 
-            {area.map((item, i) => {
+                {area.map((item, i) => {
 
-            return (
-            toggle ? <Link to={`/searcharea/${item.strArea}`}>{item.strArea}</Link> : null
-             )
-             }
+                    return (
+                        toggle ? <Link to={`/searcharea/${item.strArea}`}>{item.strArea}</Link> : null
+                    )
+                }
 
-             )}
+                )}
 
             </div>
-           
-           <div className={styles.standard}>
 
-           {area.map((item, i) => {
+            {toggle ? null :
+                <div className={styles.standard}>
+                    {area.map((item, i) => {
 
-            return (
-            toggle ? null :
+                        return (
+                            toggle ? null :
 
-           <Link to={`/searcharea/${item.strArea}`}>{item.strArea}</Link> 
+                                <Link to={`/searcharea/${item.strArea}`}>{item.strArea}</Link>
 
-                   )
-           }
+                        )
+                    })}
+                </div>
+            }
 
-           )}
 
-           </div>
+
+
+
 
 
             {/*toggle ? null : <div>

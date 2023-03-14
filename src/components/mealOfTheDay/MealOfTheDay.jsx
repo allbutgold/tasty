@@ -1,5 +1,5 @@
 // library import
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
 // import scss
@@ -16,32 +16,32 @@ const MealOfTheDay = () => {
                 console.log(data)
                 setRandomMeal(data.meals[0])
             })
-            
-    },[]);
-    
+
+    }, []);
+
     if (!randomMeal) return null;
-    const id = randomMeal.idMeal;   
+    const id = randomMeal.idMeal;
 
     return (
         <section className={styles.mealOfTheDay}>
             <Link to={`/detailspage/${id}`} >
-                <h1>Meal of the day</h1>
+                <h2>Meal of the day</h2>
                 <article>
-                <h2>{randomMeal.strMeal}</h2>
-                <div>
-                    <p>{randomMeal.strCategory}</p>
-                    <p>{randomMeal.strArea}</p>            
-                </div>
+                    <p className={styles.randomMeal}>{randomMeal.strMeal}</p>
+                    <div>
+                        <p>{randomMeal.strCategory}</p>
+                        <p>{randomMeal.strArea}</p>
+                    </div>
 
-            </article>
+                </article>
             </Link>
-        
+
 
 
         </section>
-        
-        
+
+
     );
-    }
+}
 
 export default MealOfTheDay;

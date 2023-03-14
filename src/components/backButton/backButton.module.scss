@@ -1,10 +1,20 @@
 .backButton {
-    margin: 20px    ;
+    margin-top: 20px;
     width: 330px;
-    a {
 
+    a {
+        display: flex;
+        width: 50px;
+        font-weight: 600;
+        font-size: 0.8em;
         text-decoration: none;
-        color: black;
+        font-family: Roboto;
+        color: #69B0B6;
+        border: 1px solid #69B0B6;
+        padding: 4px 8px;
+        border-radius: 20px;
+        background-color: transparent;
+        margin-right: 5px;
     }
 
-}   
+}

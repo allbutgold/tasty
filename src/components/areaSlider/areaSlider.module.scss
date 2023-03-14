@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
 @mixin tag {
     font-family: Roboto;
     font-size: 0.8em;
@@ -26,7 +36,7 @@
         margin-block: 10px;
 
         h2 {
-            font-family: Mondserat;
+            font-family: montserrat;
             font-size: 1.3em;
         }
 

@@ -4,7 +4,7 @@
     align-items: center;
     flex-wrap: wrap;
     max-width: 140px;
-    height: 200px;
+    height: 220px;
     text-align: center;
     margin: 10px;
     padding: 10px;
@@ -18,8 +18,13 @@
     }
 
     h4 {
+<<<<<<< HEAD
         max-width: 25ch;
         max-height: 3.5ch;
+=======
+        max-width:  25ch;
+        max-height: 40px;
+>>>>>>> 134969f35a1f222c315589ad436d25b6ca060c14
         margin: 0 10px 0 10px;
         overflow: hidden;
 

@@ -5,20 +5,26 @@
         article {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-around;
             height: 100px;
             margin: 10px;
             padding: 10px;
             border-radius: 1.5rem;
             box-shadow: rgba(0, 0, 0, 0.226) 0px 7px 16px -5px ;
             img {
-                width: 80px;
+                width: 120px;
                 height: 80px;
                 border-radius: 20px;
             }
-            p {
-                margin: 0 20px 0 40px;
+            div {
+                width: 70%;
+                margin-left: 40px;
+                text-align: start;
+                h3 {
+                    font-size: 1em;
+                }
             }
+            
         }
     }
     

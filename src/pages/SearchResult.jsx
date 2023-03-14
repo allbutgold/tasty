@@ -31,8 +31,11 @@ const SearchResult = () => {
                             to={`/detailspage/${results.idMeal}`}>
                                 <article>
                                     <img src={results.strMealThumb} alt="" />
-                                    <h1>{results.strMeal}</h1>
+                                    <div>
+                                    <h3>{results.strMeal}</h3>
                                     <p>{results.strCategory}</p>
+                                    </div>
+                                    
                                 </article>
                             </Link>
                     )

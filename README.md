@@ -1,5 +1,4 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fa24d1a5-f3ac-468c-9111-404034bf8ad6/deploy-status)](https://app.netlify.com/sites/clinquant-squirrel-8b4fad/deploys)
-<img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/allbutgold/tasty">
 <br/>
 
 <h1>Tasty App</h2>
@@ -43,6 +42,12 @@ The Tasty App uses SCSS for styling. The styles are defined in separate SCSS fil
 <h2>Routing</h2>
 
 The Tasty App uses React Router to handle navigation between pages. Each page is associated with a specific route, and the Routes component is used to define the app's routing.
+
+<h2>Contributing Programmers</h2>
+
+- nizza1
+- allbutgold
+- domieee
 
 
 

@@ -1,7 +1,6 @@
 .searchResult {
     a {
         text-decoration: none;
-        color: black;
         article {
             display: flex;
             align-items: center;
@@ -17,6 +16,7 @@
                 border-radius: 20px;
             }
             div {
+                color: black;
                 width: 70%;
                 margin-left: 40px;
                 text-align: start;
